@@ -100,6 +100,7 @@ function Login() {
         history.replace(from);
     })
   }
+  console.log(user);
 
   return (
     <div style={{textAlign: 'center'}} >
