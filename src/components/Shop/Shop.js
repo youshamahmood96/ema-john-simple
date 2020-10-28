@@ -10,7 +10,7 @@ const Shop = () => {
     const [cart,setCart]=useState([]);
 
     useEffect(()=>{
-        fetch('http://localhost:5000/products')
+        fetch('https://young-mesa-39085.herokuapp.com/products')
         .then(res=>res.json())
         .then(data=>{
             setProducts(data)
@@ -22,7 +22,7 @@ const Shop = () => {
     useEffect(()=>{
         const savedCart = getDatabaseCart();
         const productKeys = Object.keys(savedCart);
-        fetch('http://localhost:5000/productsByKeys',{
+        fetch('https://young-mesa-39085.herokuapp.com/productsByKeys',{
             method: 'POST',
             headers: { 'Content-Type': 'application/json'},
             body : JSON.stringify(productKeys)
@@ -57,6 +57,9 @@ const Shop = () => {
     return (
         <div className='twin-container'>
             <div className="product-container">
+            {
+                products.length===0 && <p>Loading...</p>
+            }
             {
                 products.map(product => <Product key={product.key}  showAddToCart={true} handleAddProduct={handleAddProduct} product={product}></Product>)
  
