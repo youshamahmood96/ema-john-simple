@@ -1,5 +1,5 @@
 # Ema-John
-A full-stack e-coomerce website<br/>
+A full-stack e-commerce website<br/>
 [Website](https://ema-john-simple-919b1.firebaseapp.com/shop)<br/>
 [Server](https://ancient-depths-25434.herokuapp.com/)<br/>
 ## Features
